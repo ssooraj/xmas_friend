@@ -1,0 +1,6 @@
+Id       | FName  |    Lname      | Selected          | Logged
+<hr>
+<% @list.each do |p| %>
+<%=p.id %> | <%= p.name %> <%= p.sname %> |<%= p.selected %> | <%=p.logged %>
+<br>
+<% end %>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Business Casual Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="assets/business-casual.css" rel="stylesheet">
+  </head>
+
+  <body>
+  
+    <div class="brand"> <center> <h1> <%= image_tag "merry-christmas1.png", class: "heading_image" %> </h1> </center></div>
+    <div class="container">
+      <div class="row">
+          
+          <div class="col-lg-4 col-md-4">
+           
+            <!-- <hr>
+            <%= image_tag "intro-pic.jpg" ,class: "img-responsive img-border img-left" %>
+            <hr class="visible-xs"> -->
+            <%= form_for :welcome, :url => {:controller => 'welcome', :action => 'index'} do |f| %>
+
+	      <div class="control-group">
+	         <%=f.label :First_Name ,:class=>"control-label" %>
+	         <div class="controls">
+	         <%=f.text_field :name ,:autofocus => true, :id=>"textinput", :class=>"input-xlarge" %>
+	        </div>
+	      </div>
+	      <br><br>
+
+	      <div class="control-group">
+	         <%=f.label :Last_Name ,:class=>"control-label" %>
+	         <div class="controls">
+	         <%=f.text_field :sname ,:autofocus => true, :id=>"textinput", :class=>"input-xlarge" %>
+	        </div>
+	      </div>
+	      <br><br>
+
+
+	      <%= f.submit "Enter", 'class'=>"btn btn-primary"%> 
+
+	      <% end %>
+        
+          </div>
+          
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+    
+
+
+
+
+
+    
+    <!-- JavaScript -->
+    <script src="assets/jquery-1.10.2.js"></script>
+    <script src="assets/bootstrap.js"></script>
+    
+
+  </body>
+</html>

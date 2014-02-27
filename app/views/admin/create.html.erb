@@ -1,0 +1,29 @@
+<center> <h1> Create a new record here </h1>
+    <br><br><br><br>
+    <div id="form_box">
+    <h4>New Record</h4>
+	<%= form_for :welcome, :url => {:controller => 'admin', :action => 'create'} do |f| %>
+
+	      <div class="control-group">
+	         <%=f.label :name ,:class=>"control-label" %>
+	         <div class="controls">
+	         <%=f.text_field :name ,:autofocus => true, :id=>"textinput", :class=>"input-xlarge" %>
+	        </div>
+	      </div>
+	      <br><br>
+
+	      <div class="control-group">
+	         <%=f.label :sname ,:class=>"control-label" %>
+	         <div class="controls">
+	         <%=f.text_field :sname ,:autofocus => true, :id=>"textinput", :class=>"input-xlarge" %>
+	        </div>
+	      </div>
+	      <br><br>
+
+	      <%= f.submit "Create", 'class'=>"btn btn-primary"%> 
+
+	<% end %>
+    </div>
+
+</center>
+
